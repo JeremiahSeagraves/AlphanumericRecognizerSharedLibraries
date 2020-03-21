@@ -13,7 +13,9 @@ def call(Closure body){
                     allOf{
                         expression { return params.ACTION ==~ /(CD|CI)/ }
                     }
-                    anyOf{ branch 'master' }
+                    anyOf{
+                        branch 'master'
+                    }
                     steps{
                         echo "Test print"
                     }
