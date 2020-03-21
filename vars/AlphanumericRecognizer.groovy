@@ -14,5 +14,14 @@ def call(Closure body){
                 }
             }
         }
+        post {
+            always {
+                dir("${WORKSPACE}"){
+                    dir(".."){
+                        sh 'rm -rf ${WORKSPACE}*'
+                    }
+                }
+            }
+        }
     }
 }
