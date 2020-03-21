@@ -1,0 +1,2 @@
+# AlphanumericRecognizerSharedLibraries
+Jenkins libraries for AlphanumericRecognizer
