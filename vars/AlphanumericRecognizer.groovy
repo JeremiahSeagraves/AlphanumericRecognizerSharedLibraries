@@ -9,16 +9,8 @@ def call(Closure body){
         }
         stages{
             stage('Test'){
-                when {
-                    allOf{
-                        expression { return params.ACTION ==~ /(CD|CI)/ }
-                    }
-                    anyOf{
-                        branch 'master'
-                    }
-                    steps{
-                        echo "Test print"
-                    }
+                steps{
+                    sh "echo test"
                 }
             }
         }
